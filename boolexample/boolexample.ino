@@ -1,16 +1,14 @@
 int click_pin = 2;
 int click_press = LOW;
-bool check = true;
 int click_count = 0;
 
+bool check = true;
+
 void setup() {
-
   Serial.begin(9600);
-
 }
 
 void loop() {
-
   pinMode(click_pin, INPUT);
   click_press = digitalRead(click_pin);
 
@@ -21,9 +19,7 @@ void loop() {
       check = false;
       Serial.print(++click_count);
       Serial.print("\n");
-
     }
-
   }
   else
   {
@@ -31,7 +27,4 @@ void loop() {
   }
 
   delay(50);
-
-
-
 }
